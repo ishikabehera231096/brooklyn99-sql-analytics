@@ -1,0 +1,154 @@
+Season,Episode,Title,Rating,running_avg_rating
+1,1,Pilot,7.8,7.8
+1,2,The Tagger,7.5,7.65
+1,3,The Slump,7.6,7.633333333333333
+1,4,M.E. Time,7.7,7.65
+1,5,The Vulture,8.0,7.720000000000001
+1,6,Halloween,8.5,7.8500000000000005
+1,7,48 Hours,8.1,7.885714285714286
+1,8,Old School,7.7,7.8625
+1,9,Sal's Pizza,7.6,7.833333333333333
+1,10,Thanksgiving,8.2,7.87
+1,11,Christmas,8.2,7.8999999999999995
+1,12,Pontiac Bandit,8.1,7.916666666666667
+1,13,The Bet,8.8,7.984615384615385
+1,14,The Ebony Falcon,7.6,7.957142857142856
+1,15,Operation: Broken Feather,8.2,7.973333333333333
+1,16,The Party,8.5,8.00625
+1,17,Full Boyle,7.9,8.0
+1,18,The Apartment,7.7,7.9833333333333325
+1,19,Tactical Village,8.5,8.010526315789473
+1,20,Fancy Brudgom,7.6,7.99
+1,21,Unsolvable,8.2,8.0
+1,22,Charges and Specs,8.9,8.040909090909091
+2,1,Undercover,8.2,8.2
+2,2,Chocolate Milk,7.7,7.949999999999999
+2,3,The Jimmy Jab Games,8.3,8.066666666666666
+2,4,Halloween II,8.8,8.25
+2,5,The Mole,8.2,8.24
+2,6,Jake and Sophia,8.2,8.233333333333333
+2,7,Lockdown,7.8,8.171428571428573
+2,8,USPIS,7.9,8.1375
+2,9,The Road Trip,8.2,8.144444444444444
+2,10,The Pontiac Bandit Returns,8.3,8.16
+2,11,Stakeout,7.8,8.127272727272727
+2,12,Beach House,8.3,8.141666666666667
+2,13,Payback,8.0,8.13076923076923
+2,14,Defense Rests,7.7,8.1
+2,15,Windbreaker City,8.2,8.106666666666666
+2,16,The Wednesday Incident,8.0,8.1
+2,17,Boyle-Linetti Wedding,8.2,8.105882352941178
+2,18,Captain Peralta,7.8,8.088888888888889
+2,19,Sabotage,7.9,8.078947368421053
+2,20,AC/DC,7.7,8.059999999999999
+2,21,Det. Dave Majors,8.0,8.057142857142857
+2,22,The Chopper,8.6,8.081818181818182
+2,23,Johnny and Dora,9.1,8.126086956521739
+3,1,New Captain,8.3,8.3
+3,2,The Funeral,7.7,8.0
+3,3,Boyle's Hunch,7.8,7.933333333333334
+3,4,The Oolong Slayer,8.5,8.075
+3,5,Halloween III,9.0,8.26
+3,6,Into the Woods,7.8,8.183333333333334
+3,7,The Mattress,7.8,8.128571428571428
+3,8,Ava,8.2,8.1375
+3,9,The Swedes,7.8,8.100000000000001
+3,10,Yippie Kayak,8.8,8.17
+3,11,Hostage Situation,7.7,8.127272727272727
+3,12,9 Days,8.0,8.116666666666667
+3,13,The Cruise,8.1,8.115384615384615
+3,14,Karen Peralta,7.6,8.078571428571427
+3,15,The 9-8,8.0,8.073333333333332
+3,16,House Mouses,7.8,8.05625
+3,17,Adrian Pimento,7.8,8.041176470588235
+3,18,Cheddar,7.8,8.027777777777779
+3,19,Terry Kitties,7.7,8.010526315789473
+3,20,Paranoia,8.2,8.02
+3,21,Maximum Security,8.1,8.023809523809524
+3,22,Bureau,8.7,8.054545454545455
+3,23,Greg and Larry,9.0,8.095652173913043
+4,1,"Coral Palms, Part 1",8.2,8.2
+4,2,"Coral Palms, Part 2",8.2,8.2
+4,3,"Coral Palms, Part 3",8.4,8.266666666666666
+4,4,The Night Shift,7.6,8.1
+4,5,Halloween IV,8.8,8.24
+4,6,Monster in the Closet,7.9,8.183333333333334
+4,7,Mr. Santiago,8.2,8.185714285714285
+4,8,Skyfire Cycle,7.8,8.1375
+4,9,The Overmining,8.0,8.122222222222222
+4,10,Captain Latvia,7.6,8.07
+4,11,"The Fugitive, Part 1",8.5,8.10909090909091
+4,12,"The Fugitive, Part 2",8.5,8.141666666666667
+4,13,The Audit,7.7,8.107692307692307
+4,14,Serve & Protect,7.9,8.092857142857143
+4,15,The Last Ride,8.3,8.106666666666666
+4,16,Moo Moo,8.9,8.15625
+4,17,Cop-Con,8.3,8.164705882352942
+4,18,Chasing Amy,8.0,8.155555555555557
+4,19,Your Honor,8.0,8.147368421052633
+4,20,The Slaughterhouse,8.0,8.14
+4,21,The Bank Job,8.5,8.157142857142858
+4,22,Crime & Punishment,8.6,8.177272727272728
+5,1,The Big House Pt. 1,8.5,8.5
+5,2,The Big House Pt. 2,8.4,8.45
+5,3,Kicks,8.0,8.299999999999999
+5,4,HalloVeen,9.5,8.6
+5,5,Bad Beat,8.0,8.48
+5,6,The Venue,7.8,8.366666666666667
+5,7,Two Turkeys,8.1,8.328571428571427
+5,8,Return to Skyfire,7.5,8.225
+5,9,99,8.8,8.288888888888888
+5,10,Game Night,8.6,8.32
+5,11,The Favor,8.0,8.290909090909091
+5,12,Safe House,8.7,8.325000000000001
+5,13,The Negotiation,8.3,8.323076923076924
+5,14,The Box,9.6,8.414285714285715
+5,15,The Puzzle Master,7.7,8.366666666666667
+5,16,NutriBoom,7.8,8.33125
+5,17,DFW,7.8,8.299999999999999
+5,18,Gray Star Mutual,8.0,8.283333333333333
+5,19,Bachelor/ette Party,8.5,8.294736842105262
+5,20,Show Me Going,8.4,8.3
+5,21,White Whale,8.0,8.285714285714286
+5,22,Jake & Amy,9.2,8.327272727272726
+6,1,Honeymoon,8.4,8.4
+6,2,Hitchcock & Scully,8.8,8.600000000000001
+6,3,The Tattler,7.6,8.266666666666667
+6,4,Four Movements,7.4,8.05
+6,5,A Tale of Two Bandits,8.2,8.08
+6,6,The Crime Scene,8.5,8.15
+6,7,The Honeypot,8.5,8.2
+6,8,"He Said, She Said",7.0,8.05
+6,9,The Golden Child,8.1,8.055555555555555
+6,10,Gintars,7.4,7.99
+6,11,The Therapist,8.1,8.0
+6,12,Casecation,7.6,7.966666666666666
+6,13,The Bimbo,7.9,7.961538461538462
+6,14,Ticking Clocks,8.4,7.992857142857143
+6,15,Return of the King,6.4,7.886666666666667
+6,16,Cinco de Mayo,9.2,7.96875
+6,17,Sicko,8.5,8.0
+6,18,Suicide Squad,9.1,8.06111111111111
+7,1,Manhunter,8.1,8.1
+7,2,Captain Kim,8.3,8.2
+7,3,Pimemento,8.6,8.333333333333334
+7,4,The Jimmy Jab Games II,7.9,8.225
+7,5,Debbie,7.3,8.040000000000001
+7,6,Trying,7.8,8.0
+7,7,Ding Dong,8.7,8.1
+7,8,The Takeback,8.2,8.1125
+7,9,Dillman,8.7,8.177777777777777
+7,10,Admiral Peralta,8.0,8.16
+7,11,Valloweaster,8.3,8.172727272727274
+7,12,Ransom,8.8,8.225
+7,13,Lights Out,9.3,8.307692307692308
+8,1,The Good Ones,4.8,4.8
+8,2,The Lake House,7.9,6.35
+8,3,Blue Flu,7.0,6.566666666666666
+8,4,Balancing,7.8,6.875
+8,5,PB&J,8.0,7.1
+8,6,The Set Up,6.7,7.033333333333334
+8,7,Game of Boyles,8.1,7.185714285714285
+8,8,Renewal,8.1,7.3
+8,9,The Last Day Pt 1,9.4,7.533333333333333
+8,10,The Last Day Pt 2,9.6,7.74
