@@ -10,6 +10,16 @@ running_avg_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/expo
 improvement_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
 df_cult_favorite = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
 
+#adding kpis 
+col1,col2,col3 = st.columns(3)
+
+with col1:
+     st.metric("Total episodes",len(df))
+with col2:
+     st.metric("Average show rating",df["Rating"].mean().round(2))
+with col3:
+     best_season = improvement_df.loc[improvement_df["improvement"].idxmax(), "Season"]
+     st.metric("Best Season in terms of improvement",best_season)
 
 
 st.write("Sample data")
@@ -32,13 +42,13 @@ st.sidebar.header("Filters")
 seasons = sorted(df_sorted["Season"].unique())
 
 #create a select box which shows all,1-8 seasons as selection value
-selected_season = st.sidebar.selectbox("Select a Season",options=["All"]+list(seasons))
+selected_season = st.sidebar.multiselect("Select a Season",options=seasons,default=seasons)
 
-#creating a logic for filter critrea
-if selected_season != "All":
-    filtered_df = df_sorted[df_sorted["Season"] == selected_season]
-else:
-        filtered_df = df_sorted
+#filtered dataframe
+filtered_df = df_sorted[df_sorted["Season"].isin(selected_season)]
+if not selected_season:
+     st.warning("Please select at least one season")
+     st.stop()
 
 #create tabs for each chart
 tab1, tab2, tab3 = st.tabs(["📈 Rating Trend", "📊 Season Comparison", "💎 Cult Favorites"])
