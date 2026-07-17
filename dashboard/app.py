@@ -4,22 +4,51 @@ import plotly.express as px
 
 st.title("Brooklyn 99 Dashboard")
 
+with st.expander("ℹ️ How to read this dashboard"):
+       st.markdown("""
+       This dashboard explores every episode of Brooklyn Nine-Nine using IMDb ratings and vote counts.
+
+       - **Rating Trend**: Each episode's rating over the series, color-coded by category (Masterpiece, Great, Average, Weak). The dashed line shows the average for your current season selection.
+       - **Season Improvement**: How each season's rating changed from its first to last episode.
+       - **Rating Distribution**: How ratings are distributed
+       - **Cult Favorites**: Episodes that were critically loved but under-watched (top-left) versus popular episodes that drew big audiences (bottom-right).
+       - **Holiday vs Non-Holiday episodes**: Average rating is compared for the holiday and non-holiday episodes.
+
+       Use the sidebar to filter by season across all tabs.
+       """)
+
 #load all the datasets
 @st.cache_data
 def load_episodes():
-    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_episodes_cleaned.csv")
+    try:
+        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_episodes_cleaned.csv")
+    except FileNotFoundError:
+         st.error("Could not find b99_episodes_cleaned.csv. Check that the exports folder path is correct.")
+         st.stop()
 
 @st.cache_data
 def load_running_avg():
-    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_running_avg_by_season.csv")
+    try:
+        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_running_avg_by_season.csv")
+    except FileNotFoundError:
+         st.error("Could not b99_running_avg_by_season.csv Check that the exports folder path is correct.")
+         st.stop()
 
 @st.cache_data
 def load_improvement():
-    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
+    try:
+        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
+    except FileNotFoundError:
+        st.error("Could not b99_season_improvement.csv Check that the exports folder path is correct.")
+        st.stop()
 
 @st.cache_data
 def load_cult_favorite():
-    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
+    try:
+        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
+    except FileNotFoundError:
+         st.error("Could not b99_cult_favorites.csv Check that the exports folder path is correct.")
+         st.stop() 
 
 df = load_episodes()
 running_df = load_running_avg()
@@ -70,7 +99,7 @@ with tab1:
     category_order = ["Weak","Average","Great","Masterpiece"]
 
 #calculate avg rating across all seasons
-    mean_rating = df["Rating"].mean().round(2)
+    mean_rating = filtered_df["Rating"].mean().round(2)
 
 
 #creating the line chart 
@@ -91,8 +120,8 @@ with tab1:
     x_order = filtered_df["season_episode"].unique().tolist()
 
 #fix the tilt of the x axis labels 
-    if selected_season == "All":
-        angle = 90 
+    if selected_season == seasons:
+        angle = 90
     else:
         angle = -45
 
@@ -120,21 +149,23 @@ with tab1:
 
 with tab2:
 #creating a bar graph 
+    filtered_improvement_df = improvement_df[improvement_df["Season"].isin(selected_season)]
+
     fig2 = px.bar(
-                    improvement_df,
-                    x="Season",
-                    y="improvement",
-                    color="improvement",
-                    color_continuous_scale="Blues",
-                    color_continuous_midpoint=0
-    )
+    filtered_improvement_df,
+    x="Season",
+    y="improvement",
+    color="improvement",
+    color_continuous_scale="Blues",
+    color_continuous_midpoint=0
+)
 
     st.plotly_chart(fig2,use_container_width=True)
     st.caption("Season 8 shows maximum improvement")
 
 
 with tab3:
-    fig3 = px.histogram(df,
+    fig3 = px.histogram(filtered_df,
                         x="Rating",
                         nbins=10,
                         )
@@ -146,14 +177,16 @@ with tab3:
 
 with tab4:
     
+    filtered_cult_favorite = df_cult_favorite[df_cult_favorite["Season"].isin(selected_season)]
+
     fig4 = px.scatter(
-           df_cult_favorite,
-           x="Total Votes",
-           y="Rating",
-           color="reception_type",
-           size="Total Votes",
-           hover_data=["Title", "Season", "Episode"]
-       )
+       filtered_cult_favorite,
+       x="Total Votes",
+       y="Rating",
+       color="reception_type",
+       size="Total Votes",
+       hover_data=["Title", "Season", "Episode"]
+   )
     st.plotly_chart(fig4, use_container_width=True)
     st.caption("Bubble size represents total vote count. Episodes in the top-left are critically loved but under-watched.")
 
