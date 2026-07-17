@@ -49,6 +49,9 @@ with tab1:
 #ordering the episode_category column
     category_order = ["Weak","Average","Great","Masterpiece"]
 
+#calculate avg rating across all seasons
+    mean_rating = df["Rating"].mean().round(2)
+
 
 #creating the line chart 
     color_map = {"Weak": "#08306b", "Average": "#4292c6", "Great": "#9ecae1", "Masterpiece": "#deebf7"}
@@ -78,6 +81,16 @@ with tab1:
         categoryarray=x_order,
         tickangle = angle
     )
+
+#add average line to the graph
+    fig.add_hline(
+       y=mean_rating,
+       line_dash="dash",
+       line_color="gray",
+       annotation_text=f"Average: {mean_rating}",
+       annotation_position="top right"
+   )
+
 
     st.plotly_chart(fig,use_container_width=True)
 
