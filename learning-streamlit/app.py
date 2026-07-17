@@ -5,10 +5,26 @@ import plotly.express as px
 st.title("Brooklyn 99 Dashboard")
 
 #load all the datasets
-df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_episodes_cleaned.csv")
-running_avg_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_running_avg_by_season.csv")
-improvement_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
-df_cult_favorite = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
+@st.cache_data
+def load_episodes():
+    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_episodes_cleaned.csv")
+
+@st.cache_data
+def load_running_avg():
+    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_running_avg_by_season.csv")
+
+@st.cache_data
+def load_improvement():
+    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
+
+@st.cache_data
+def load_cult_favorite():
+    return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
+
+df = load_episodes()
+running_df = load_running_avg()
+improvement_df = load_improvement()
+df_cult_favorite = load_cult_favorite()
 
 with st.container(border=True):
 #adding kpis 
