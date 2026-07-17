@@ -10,16 +10,20 @@ running_avg_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/expo
 improvement_df = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
 df_cult_favorite = pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
 
+with st.container(border=True):
 #adding kpis 
-col1,col2,col3 = st.columns(3)
+    col1,col2,col3 = st.columns(3)
 
-with col1:
+    with col1:
      st.metric("Total episodes",len(df))
-with col2:
+    with col2:
      st.metric("Average show rating",df["Rating"].mean().round(2))
-with col3:
-     best_season = improvement_df.loc[improvement_df["improvement"].idxmax(), "Season"]
-     st.metric("Best Season in terms of improvement",best_season)
+    with col3:
+     season_ratings = df.groupby("Season").agg(Rating=("Rating", "mean")).reset_index()
+     best_season = season_ratings.loc[season_ratings["Rating"].idxmax(),"Season"]
+     st.metric("Best Season",best_season)
+
+st.divider()
 
 #sorting the dataframe according to season and episode
 df_sorted = df.sort_values(["Season","Episode"])
@@ -81,6 +85,10 @@ with tab1:
         categoryarray=x_order,
         tickangle = angle
     )
+    fig.update_layout(
+    xaxis=dict(
+        nticks=23,
+    ))
 
 #add average line to the graph
     fig.add_hline(
@@ -106,6 +114,7 @@ with tab2:
     )
 
     st.plotly_chart(fig2,use_container_width=True)
+    st.caption("Season 8 shows maximum improvement")
 
 
 with tab3:
@@ -116,6 +125,7 @@ with tab3:
     fig3.update_layout(yaxis_title=None)
     
     st.plotly_chart(fig3,use_container_width=True)
+    st.caption("A lot of the episodes have a rating between 8 to 8.4")
 
 
 with tab4:
@@ -129,6 +139,7 @@ with tab4:
            hover_data=["Title", "Season", "Episode"]
        )
     st.plotly_chart(fig4, use_container_width=True)
+    st.caption("Bubble size represents total vote count. Episodes in the top-left are critically loved but under-watched.")
 
 
 with tab5:
@@ -141,5 +152,6 @@ with tab5:
                    text_auto=".2f",
                    hover_data = ["Rating","episode_count"])
       st.plotly_chart(fig5,use_container_width=True)
+      st.caption("Holiday Episodes on a average outperform the Non-Holiday ones")
     
 
