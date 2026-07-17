@@ -43,7 +43,7 @@ if not selected_season:
      st.stop()
 
 #create tabs for each chart
-tab1, tab2, tab3, tab4 = st.tabs(["📈 Rating Trend", "📊 Season Improvement", "📉 Rating Distribution","💎 Cult Favorites"])
+tab1, tab2, tab3, tab4,tab5 = st.tabs(["📈 Rating Trend", "📊 Season Improvement", "📉 Rating Distribution","💎 Cult Favorites","🎄 Holiday Comparison"])
 
 with tab1:
 #ordering the episode_category column
@@ -116,5 +116,17 @@ with tab4:
            hover_data=["Title", "Season", "Episode"]
        )
     st.plotly_chart(fig4, use_container_width=True)
+
+
+with tab5:
+      holiday_stats = filtered_df.groupby("is_holiday").agg(Rating=("Rating", "mean"),episode_count=("Rating", "count")).reset_index()
+      holiday_stats = holiday_stats.rename(columns={'is_holiday': 'Episode Type'})
+      fig5 = px.bar(holiday_stats,
+                   x="Episode Type",
+                   y="Rating",
+                   color="Episode Type",
+                   text_auto=".2f",
+                   hover_data = ["Rating","episode_count"])
+      st.plotly_chart(fig5,use_container_width=True)
     
 
