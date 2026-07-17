@@ -21,7 +21,7 @@ with st.expander("ℹ️ How to read this dashboard"):
 @st.cache_data
 def load_episodes():
     try:
-        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_episodes_cleaned.csv")
+        return pd.read_csv("exports/b99_episodes_cleaned.csv")
     except FileNotFoundError:
          st.error("Could not find b99_episodes_cleaned.csv. Check that the exports folder path is correct.")
          st.stop()
@@ -29,7 +29,7 @@ def load_episodes():
 @st.cache_data
 def load_running_avg():
     try:
-        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_running_avg_by_season.csv")
+        return pd.read_csv("exports/b99_running_avg_by_season.csv")
     except FileNotFoundError:
          st.error("Could not b99_running_avg_by_season.csv Check that the exports folder path is correct.")
          st.stop()
@@ -37,7 +37,7 @@ def load_running_avg():
 @st.cache_data
 def load_improvement():
     try:
-        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_season_improvement.csv")
+        return pd.read_csv("exports/b99_season_improvement.csv")
     except FileNotFoundError:
         st.error("Could not b99_season_improvement.csv Check that the exports folder path is correct.")
         st.stop()
@@ -45,7 +45,7 @@ def load_improvement():
 @st.cache_data
 def load_cult_favorite():
     try:
-        return pd.read_csv("/Users/ishik/Desktop/brooklyn99-sql-analytics/exports/b99_cult_favorites.csv")
+        return pd.read_csv("exports/b99_cult_favorites.csv")
     except FileNotFoundError:
          st.error("Could not b99_cult_favorites.csv Check that the exports folder path is correct.")
          st.stop() 
