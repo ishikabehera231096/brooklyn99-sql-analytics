@@ -21,14 +21,6 @@ with col3:
      best_season = improvement_df.loc[improvement_df["improvement"].idxmax(), "Season"]
      st.metric("Best Season in terms of improvement",best_season)
 
-
-st.write("Sample data")
-st.dataframe(df.head(10))
-st.write("Descriptive Statistics")
-st.write(df.describe())
-
-st.subheader("Rating Over Time")
-
 #sorting the dataframe according to season and episode
 df_sorted = df.sort_values(["Season","Episode"])
 
@@ -51,7 +43,7 @@ if not selected_season:
      st.stop()
 
 #create tabs for each chart
-tab1, tab2, tab3 = st.tabs(["📈 Rating Trend", "📊 Season Comparison", "💎 Cult Favorites"])
+tab1, tab2, tab3, tab4 = st.tabs(["📈 Rating Trend", "📊 Season Improvement", "📉 Rating Distribution","💎 Cult Favorites"])
 
 with tab1:
 #ordering the episode_category column
@@ -87,48 +79,34 @@ with tab1:
         tickangle = angle
     )
 
-#fitting the chart to fit the container
     st.plotly_chart(fig,use_container_width=True)
 
 with tab2:
-    
-
-
-#putting chart in each column
-    col1,col2 = st.columns(2)
-
-#creating a bar and a histogram
-    with col1:
-            st.subheader("Season Improvement")
-            fig2 = px.bar(
-                            improvement_df,
-                            x="Season",
-                            y="improvement",
-                            color="improvement",
-                            color_continuous_scale="Blues",
-                            color_continuous_midpoint=0
+#creating a bar graph 
+    fig2 = px.bar(
+                    improvement_df,
+                    x="Season",
+                    y="improvement",
+                    color="improvement",
+                    color_continuous_scale="Blues",
+                    color_continuous_midpoint=0
     )
 
-            st.plotly_chart(fig2,use_container_width=True)
+    st.plotly_chart(fig2,use_container_width=True)
 
-
-    with col2:
-            st.subheader("Rating Distribution")
-            fig3 = px.histogram(df,
-                                x="Rating",
-                                nbins=10,
-                                )
-            fig3.update_layout(yaxis_title=None)
-    
-            st.plotly_chart(fig3,use_container_width=True)
-
-
-
-#load the cult favorite csv
 
 with tab3:
+    fig3 = px.histogram(df,
+                        x="Rating",
+                        nbins=10,
+                        )
+    fig3.update_layout(yaxis_title=None)
     
-    st.subheader("Popularity vs. Appreciation")
+    st.plotly_chart(fig3,use_container_width=True)
+
+
+with tab4:
+    
     fig4 = px.scatter(
            df_cult_favorite,
            x="Total Votes",
