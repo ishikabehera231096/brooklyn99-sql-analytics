@@ -62,13 +62,13 @@ Season,Episode,Title,Rating,Total Votes,reception_type
 5,20,Show Me Going,8.4,2261,Balanced
 3,18,Cheddar,7.8,2265,Balanced
 4,22,Crime & Punishment,8.6,2267,Cult Favorite
-4,4,The Night Shift,7.6,2283,Popular Voting Choice
+4,4,The Night Shift,7.6,2283,Fan Service
 3,15,The 9-8,8.0,2288,Balanced
 4,11,"The Fugitive, Part 1",8.5,2299,Balanced
 4,7,Mr. Santiago,8.2,2304,Balanced
 6,5,A Tale of Two Bandits,8.2,2310,Balanced
 5,2,The Big House Pt. 2,8.4,2318,Balanced
-3,11,Hostage Situation,7.7,2320,Popular Voting Choice
+3,11,Hostage Situation,7.7,2320,Fan Service
 6,7,The Honeypot,8.5,2338,Balanced
 4,2,"Coral Palms, Part 2",8.2,2365,Balanced
 4,3,"Coral Palms, Part 3",8.4,2365,Balanced
@@ -79,29 +79,29 @@ Season,Episode,Title,Rating,Total Votes,reception_type
 5,12,Safe House,8.7,2383,Cult Favorite
 3,8,Ava,8.2,2406,Balanced
 3,3,Boyle's Hunch,7.8,2413,Balanced
-6,4,Four Movements,7.4,2430,Popular Voting Choice
-2,20,AC/DC,7.7,2433,Popular Voting Choice
-3,9,The Swedes,7.8,2437,Popular Voting Choice
+6,4,Four Movements,7.4,2430,Fan Service
+2,20,AC/DC,7.7,2433,Fan Service
+3,9,The Swedes,7.8,2437,Fan Service
 6,6,The Crime Scene,8.5,2451,Balanced
 2,19,Sabotage,7.9,2453,Balanced
-6,15,Return of the King,6.4,2463,Popular Voting Choice
+6,15,Return of the King,6.4,2463,Fan Service
 2,21,Det. Dave Majors,8.0,2470,Balanced
 3,12,9 Days,8.0,2472,Balanced
-2,18,Captain Peralta,7.8,2480,Popular Voting Choice
-3,2,The Funeral,7.7,2482,Popular Voting Choice
-2,14,Defense Rests,7.7,2497,Popular Voting Choice
+2,18,Captain Peralta,7.8,2480,Fan Service
+3,2,The Funeral,7.7,2482,Fan Service
+2,14,Defense Rests,7.7,2497,Fan Service
 5,1,The Big House Pt. 1,8.5,2498,Balanced
 4,1,"Coral Palms, Part 1",8.2,2502,Balanced
 2,16,The Wednesday Incident,8.0,2510,Balanced
 2,13,Payback,8.0,2543,Balanced
 2,15,Windbreaker City,8.2,2561,Balanced
-2,11,Stakeout,7.8,2571,Popular Voting Choice
+2,11,Stakeout,7.8,2571,Fan Service
 2,17,Boyle-Linetti Wedding,8.2,2582,Balanced
 3,4,The Oolong Slayer,8.5,2593,Balanced
 2,22,The Chopper,8.6,2594,Balanced
 6,18,Suicide Squad,9.1,2596,Balanced
-2,8,USPIS,7.9,2624,Popular Voting Choice
-2,7,Lockdown,7.8,2629,Popular Voting Choice
+2,8,USPIS,7.9,2624,Fan Service
+2,7,Lockdown,7.8,2629,Fan Service
 5,9,99,8.8,2642,Balanced
 2,10,The Pontiac Bandit Returns,8.3,2662,Balanced
 5,10,Game Night,8.6,2665,Balanced
@@ -113,16 +113,16 @@ Season,Episode,Title,Rating,Total Votes,reception_type
 2,5,The Mole,8.2,2739,Balanced
 2,6,Jake and Sophia,8.2,2743,Balanced
 3,23,Greg and Larry,9.0,2746,Balanced
-2,2,Chocolate Milk,7.7,2752,Popular Voting Choice
+2,2,Chocolate Milk,7.7,2752,Fan Service
 3,1,New Captain,8.3,2762,Balanced
-1,20,Fancy Brudgom,7.6,2775,Popular Voting Choice
-1,18,The Apartment,7.7,2785,Popular Voting Choice
+1,20,Fancy Brudgom,7.6,2775,Fan Service
+1,18,The Apartment,7.7,2785,Fan Service
 7,13,Lights Out,9.3,2786,Balanced
 1,21,Unsolvable,8.2,2819,Balanced
 6,1,Honeymoon,8.4,2828,Balanced
 2,3,The Jimmy Jab Games,8.3,2872,Balanced
-1,17,Full Boyle,7.9,2873,Popular Voting Choice
-1,14,The Ebony Falcon,7.6,2897,Popular Voting Choice
+1,17,Full Boyle,7.9,2873,Fan Service
+1,14,The Ebony Falcon,7.6,2897,Fan Service
 6,16,Cinco de Mayo,9.2,2923,Balanced
 2,1,Undercover,8.2,2924,Balanced
 1,19,Tactical Village,8.5,2990,Balanced
@@ -130,25 +130,25 @@ Season,Episode,Title,Rating,Total Votes,reception_type
 1,11,Christmas,8.2,3030,Balanced
 1,15,Operation: Broken Feather,8.2,3033,Balanced
 3,5,Halloween III,9.0,3065,Balanced
-1,12,Pontiac Bandit,8.1,3083,Popular Voting Choice
-1,9,Sal's Pizza,7.6,3102,Popular Voting Choice
-1,8,Old School,7.7,3166,Popular Voting Choice
-1,10,Thanksgiving,8.2,3178,Popular Voting Choice
+1,12,Pontiac Bandit,8.1,3083,Fan Service
+1,9,Sal's Pizza,7.6,3102,Fan Service
+1,8,Old School,7.7,3166,Fan Service
+1,10,Thanksgiving,8.2,3178,Fan Service
 1,16,The Party,8.5,3192,Balanced
 5,22,Jake & Amy,9.2,3213,Balanced
 2,4,Halloween II,8.8,3222,Balanced
-1,7,48 Hours,8.1,3308,Popular Voting Choice
-1,5,The Vulture,8.0,3370,Popular Voting Choice
+1,7,48 Hours,8.1,3308,Fan Service
+1,5,The Vulture,8.0,3370,Fan Service
 2,23,Johnny and Dora,9.1,3448,Balanced
 1,22,Charges and Specs,8.9,3450,Balanced
-1,4,M.E. Time,7.7,3473,Popular Voting Choice
+1,4,M.E. Time,7.7,3473,Fan Service
 1,13,The Bet,8.8,3501,Balanced
-1,3,The Slump,7.6,3591,Popular Voting Choice
+1,3,The Slump,7.6,3591,Fan Service
 1,6,Halloween,8.5,3767,Balanced
-1,2,The Tagger,7.5,3833,Popular Voting Choice
-6,8,"He Said, She Said",7.0,3847,Popular Voting Choice
+1,2,The Tagger,7.5,3833,Fan Service
+6,8,"He Said, She Said",7.0,3847,Fan Service
 4,16,Moo Moo,8.9,4165,Balanced
-8,1,The Good Ones,4.8,4515,Popular Voting Choice
+8,1,The Good Ones,4.8,4515,Fan Service
 5,4,HalloVeen,9.5,4666,Balanced
-1,1,Pilot,7.8,4701,Popular Voting Choice
+1,1,Pilot,7.8,4701,Fan Service
 5,14,The Box,9.6,6262,Balanced
